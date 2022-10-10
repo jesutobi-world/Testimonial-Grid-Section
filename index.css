@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: hsl(210, 46%, 95%);    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+.container{
+    width: 80%;
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+#box-1{
+    background-color: hsl(263, 55%, 52%);
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    border-radius: 7px;
+    background-image: url(./images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: 75% top;
+    padding: 25px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: space-between;
+}
+#box-2{
+    background-color: hsl(217, 19%, 35%);
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    border-radius: 7px;
+    padding: 25px 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: space-between;
+}
+    
+
+#box-3{
+    background-color: white;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 4;
+    grid-column-end: 5;
+    border-radius: 7px;
+    padding: 25px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: space-between;
+}
+#box-4{
+    background-color: white;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    border-radius: 7px;
+    padding: 25px 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: space-between;
+}
+#box-5{
+    background-color: hsl(219, 29%, 14%);
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    border-radius: 7px;
+    padding: 25px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: space-between;
+}
+.profile{
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+}
+.profile img{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    border: 2px solid white;
+}
+.name-tag{
+    display: flex;
+    flex-direction: column;
+}
+.tag-1{
+    color: white;
+    font-size: 17px;
+}
+.tag-2{
+    color: white;
+    opacity: 50%;
+    font-size: 16px;
+    font-weight: lighter;
+}
+#box-4 .tag-1,
+#box-3 .tag-1,
+#box-3 .main-text,
+#box-4 .main-text{
+    color:hsl(217, 19%, 35%);
+}
+#box-4 .tag-2,
+#box-3 .tag-2{
+    color:hsl(217, 19%, 35%);
+    opacity: 70%;
+}
+.main-text{
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+}
+.sub-text{
+    color: white;
+    opacity: 50%;
+    font-size: 14px;
+}
+#box-3 .sub-text,
+#box-4 .sub-text{
+    color: hsl(217, 19%, 35%);
+    opacity: 70%;
+    font-size: 15px;
+}
+@media(max-width: 500px){
+    body{
+        height: 2000px;
+    }
+    .container{
+        width: 100%;
+        height: 100%;
+        max-width: 320px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        overflow: scroll;
+        padding: 30px;
+    }
+    #box-1{
+        grid-column-start:1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 3;
+        background-color: hsl(263, 55%, 52%);
+        background-size: 25% 20%;
+        background-position: 80% top;
+    }
+    #box-2{
+        grid-column-start:1;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        background-color: hsl(217, 19%, 35%);
+    }
+    #box-3{
+        grid-column-start:1;
+        grid-column-end: 2;
+        grid-row-start: 7;
+        grid-row-end: 9;
+    }
+    #box-4{
+        grid-column-start:1;
+        grid-column-end: 2;
+        grid-row-start: 4;
+        grid-row-end: 5;
+    }
+    #box-5{
+        grid-column-start:1;
+        grid-column-end: 2;
+        grid-row-start: 5;
+        grid-row-end: 7;
+    }
+    .name-tag{
+        gap: 5px;
+    }
+    .profile img{
+        width: 35px;
+        height: 35px;
+    }
+    .tag-1{
+        font-size: 16px;
+    }
+    .tag-2{
+        font-size: 14px;
+    }
+    .main-text{
+        font-size: 18px;
+    }
+    .sub-text{
+        font-size: 13px;
+    }
+    #box-4 .sub-text,
+    #box-3 .sub-text{
+        font-size: 12px;
+    }
+}
